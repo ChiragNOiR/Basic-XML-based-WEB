@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/css" href="catalog_20048877.css"?> <!-- Linking CSS to XML Document-->
+<!--
+    Name: Chirag Pokharel
+    London met ID: 20048877
+    Date: 1st May, 2022
+    Description: This XML file is to create a giftcard tree file, which shows the tree content on the parent class.
+ -->
+<Store xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="catalog_20048877.xsd"> <!-- Linking Schema to XML-->
+
+    <!-- Start of navigation bar for website -->
+    <navbar> 
+        <logo id="img"></logo>
+        <store_name> Secret Card Stores </store_name>
+        <nav1>Home</nav1>
+        <nav2>Products</nav2>
+        <nav3>About US</nav3>
+        <nav4>Contact</nav4>
+    </navbar>
+
+    <!-- Creation of physicalgiftcard section to include giftcard in website -->
+    <physicalgiftcard id="grid">
+        <Wendys id="grid-item"> <!-- Forming id and listing it as grid items -->
+            <Wendys-card id="card">
+                <img id="Wendys-image" src="Wendys.png" alt="" />
+                <div id="card-context"> <!-- Creating div section to include giftcard details-->
+                    <name id="name-header">Wendy's</name>
+                    <accepted_location> Wendy's Branches</accepted_location>
+                    <valid_area> Giftcard will be accepted only in United Kingdom Region </valid_area>
+                    <price> 10 </price>
+                    <type>Physical</type>
+                    <number_of_users> 4999 </number_of_users>
+                    <discount> 10 </discount> 
+                    <code> FFFF-GGGG-3839 </code>
+                    <description> <!-- Adding description content in CDATA-->
+                        <![CDATA[When you purchase Wendy's giftcard you aren't pusrchasing just a card with balance on it, 
+                        You are connecting Wendy's employee with millions and millions of customers. This is the freedom
+                        that allows you to buy what you truly need, and gives you satisfaction of having gifted well.]]>
+                    </description>
+                    <button id="btn-card">Add to cart</button> <!-- Creating button element for the option to buy giftcard -->
+                </div><!-- End of div class-->
+            </Wendys-card>
+        </Wendys>
+
+        <Gucci id="grid-item"><!-- Forming id and listing it as grid items -->
+            <Gucci-card id="card">
+                <img id="Gucci-image" src="Gucci.png" alt="" />
+                <div id="card-context"><!-- Creating div section to include giftcard details-->
+                    <name id="name-header">Gucci </name>
+                    <accepted_location> Gucci Boutiques </accepted_location>
+                    <valid_area> Giftcard will be accepted only in United Kingdom Region </valid_area> 
+                    <price> 500 </price>
+                    <type>Physical</type>
+                    <number_of_users> 9999 </number_of_users>
+                    <discount> 20 </discount>
+                    <code> NHKBC3708 </code>
+                    <description>
+                        <![CDATA[Gucci is an Italian luxury brand of fashion and leather goods founded by Guccio Gucci in 1921 which is 
+                        101 years ago from this year 2022. Its product lines  include handbags, ready-to-wear, footwear, and accessories, 
+                        makeup, fragrances, and home decoration. This Gucci giftcard has made people free of buying what you truly need, 
+                        and gives you satisfaction of having gifted well.]]>
+                    </description>
+                    <button id="btn-card">Add to cart</button>
+                </div><!-- End of div class-->
+            </Gucci-card>
+        </Gucci>
+
+        <Starbucks id="grid-item"><!-- Forming id and listing it as grid items -->
+            <Starbucks-card id="card">
+                <img id="Starbucks-image" src="Starbucks.png" alt="" />
+                <div id="card-context"><!-- Creating div section to include giftcard details-->
+                    <name id="name-header">Starbucks</name>
+                    <accepted_location> Starbucks Branches </accepted_location>
+                    <valid_area>Giftcard will be accepted only in United Kingdom Region</valid_area>
+                    <price> 5 </price>
+                    <type>Physical</type>
+                    <number_of_users> 2999 </number_of_users>
+                    <discount> 20 </discount>
+                    <code> NHKG-0070-782 </code>
+                    <description>
+                        <![CDATA[Whether you're searching for something new to warm your mug, seeking the best brew method for your 
+                        favorite blend or exploring our rarest offerings, you've come to the right place. Exceptional coffees from 
+                        around the world. Sourced for the season, roasted at Starbucks Reserve® Roasteries and crafted with care. Starbucks
+                        giftcard not only provide balance it also provide freedom that allows you to buy what you truly need, and gives you satisfaction of having gifted well.]]>
+                    </description>
+                    <button id="btn-card">Add to cart</button>
+                </div><!-- End of div class-->
+            </Starbucks-card>
+        </Starbucks>
+    </physicalgiftcard>
+
+    <!-- Creation of digitalgiftcard section to include giftcard in website -->
+    <digitalgiftcard id="grid">
+        <Tinder id="Td_001">
+            <Tinder-card id="card">
+                <img id="Tinder-image" src="Tinder.png" alt="" />
+                <div id="card-context"><!-- Creation of div class-->
+                    <name id="name-header">Tinder</name>
+                    <availability> 11-11-2022 </availability>
+                    <valid_area> Giftcard will be accepted only in United Kingdom Region</valid_area>
+                    <price> 20 </price>
+                    <type>Digital</type>
+                    <number_of_users> 2999 </number_of_users>
+                    <discount> 10 </discount>
+                    <code> NHKBC3708 </code>
+                    <description>
+                        <![CDATA[Tinder is an online dating and geosocial networking application. In Tinder, users "swipe right" to like or "swipe left" to dislike 
+                        other users' profiles, which include their photo, a short bio, and a list of their interests. Tinder uses a "double opt-in" system 
+                        where both users must match before they can exchange messages.]]>
+                    </description>
+                    <button id="btn-card">BUY NOW</button>
+                </div><!-- end of div class-->
+            </Tinder-card>
+        </Tinder>
+        <Playstation id="PS_001">
+            <Playstation-card id="card">
+                <img id="Playstation-image" src="PS.png" alt="" />
+                <div id="card-context"><!-- Creation of div class-->
+                    <name id="name-header"> PlayStation </name>
+                    <availability> 14-02-2022 </availability>
+                    <valid_area> Giftcard will be accepted only in United Kingdom Region </valid_area>
+                    <price> 10 </price>
+                    <type>Digital</type>
+                    <number_of_users> 10000 </number_of_users>
+                    <discount> 10 </discount>
+                    <code> MCBSDK9054 </code>
+                    <description>
+                        <![CDATA[PlayStation is a video game brand that consists of five home video game consoles, two handhelds, a media center, 
+                        and a smartphone, as well as an online service and multiple magazines. The brand is produced by Sony Interactive 
+                        Entertainment, a division of Sony; the first PlayStation console was released in Japan in December 1994, and 
+                        worldwide the following year.]]>
+                    </description>
+                    <button id="btn-card">BUY NOW</button>
+                </div><!-- End of div class-->
+            </Playstation-card>
+        </Playstation>
+        <Valorant id="VALO_001">
+            <Valorant-card id="card">
+                <img id="Valorant-image" src="Valorant.img" alt="" />
+                <div id="card-context"><!-- Creation of div class-->
+                    <name>Valorant</name>
+                    <availability> 07-03-2022 </availability>
+                    <accepted_location> Riot Store</accepted_location>
+                    <valid_area> This giftcard is accepted in any region. </valid_area>
+                    <price> 10 </price>
+                    <number_of_users> 2999 </number_of_users>
+                    <code> RKBMC5831 </code>
+                    <description>
+                        <![CDATA[VALORANT is a free-to-play first-person hero shooter developed and published by Riot Games, 
+                        for Microsoft Windows. First teased under the codename Project A in October 2019, the game began a 
+                        closed beta period with limited access on April 7, 2020, followed by an official release on June 2, 2020. 
+                        The development of the game started in 2014.]]>
+                    </description>
+                    <button id="btn-card">BUY NOW</button>
+                </div><!-- End of div class-->
+            </Valorant-card>
+        </Valorant>
+    </digitalgiftcard>
+
+    <footer id="footer_001"> <!-- Creating seperate section for footer option in website-->
+        <Valorant-card id="card">
+            <div id="small-footer"> <!-- Creation of div class for the first header section-->
+                <content>Feel free to download our Mobile APP</content>
+                <button id ="bt1">Download APP</button> <!-- Creating button for options-->
+            </div><!-- End of div class-->
+            <div id="foot-section"> <!-- Creation of div class for footer section-->
+                <name id="name_001"> Secret Card Stores </name>
+                <slogan>A Moments of Choosing Best Gift is in your hands.</slogan>
+                <payment_info>By the way, We accept all kinds of digital payments.</payment_info>
+                <address>London, United Kingdom</address>
+                <mobile_number>+44 1632 960802</mobile_number>
+                <telephone_number> +44 01632 960092</telephone_number>
+                <email>pokharel.gc.stores@gmail.com</email>
+                <website>https://www.SecretCardstoresgc.com.uk/contact</website>
+            </div><!-- End of div class-->
+            <div id= "copy-001"> <!-- Creating div class for last footer-->
+                <copyright> © 2016 - 2022 Secret Card Store PLC - All rights reserved. Licensed via Government of UK</copyright>
+            </div><!-- End of div class for last footer-->
+        </Valorant-card>
+    </footer>
+</Store>
+<!-- End of XML Document-->

@@ -1,0 +1,258 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Store" type="StoreType">
+    <xs:annotation>
+      <xs:documentation> Linking CSS to XML Document
+    Name: Chirag Pokharel
+    London met ID: 20048877
+    Date: 1st May, 2022
+    Description: This XML file is to create a giftcard tree file, which shows the tree content on the parent class.
+ </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="logoType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="id"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="navbarType">
+    <xs:sequence>
+      <xs:element type="logoType" name="logo"/>
+      <xs:element type="xs:string" name="store_name"/>
+      <xs:element type="xs:string" name="nav1"/>
+      <xs:element type="xs:string" name="nav2"/>
+      <xs:element type="xs:string" name="nav3"/>
+      <xs:element type="xs:string" name="nav4"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="imgType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="id" use="optional"/>
+        <xs:attribute type="xs:string" name="src" use="optional"/>
+        <xs:attribute type="xs:string" name="alt" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="nameType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="id" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="buttonType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="id" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="divType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element type="nameType" name="name">
+        <xs:annotation>
+          <xs:documentation> Creating div section to include giftcard details Creating div section to include giftcard details Creating div section to include giftcard details Creation of div class Creation of div class Creation of div class Creation of div class Creation of div class for footer section</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="accepted_location"/>
+      <xs:element type="xs:string" name="availability"/>
+      <xs:element type="xs:string" name="valid_area"/>
+      <xs:element type="xs:float" name="price"/>
+      <!-- <xs:element type="xs:string" name="type"/> -->
+      <xs:element name="type" minOccurs="0">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Digital"/>
+                <xs:enumeration value="Physical"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+      <xs:element type="xs:float" name="number_of_users"/>
+      <xs:element type="xs:float" name="discount"/>
+      <xs:element type="xs:string" name="code"/>
+      <xs:element type="xs:string" name="description">
+        <xs:annotation>
+          <xs:documentation> Adding description content in CDATA</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="buttonType" name="button"/>
+      <xs:element type="xs:string" name="content">
+        <xs:annotation>
+          <xs:documentation> Creation of div class for the first header section</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="slogan"/>
+      <xs:element type="xs:string" name="payment_info"/>
+      <xs:element type="xs:string" name="address"/>
+      <xs:element type="xs:string" name="mobile_number"/>
+      <xs:element type="xs:string" name="telephone_number"/>
+      <xs:element type="xs:string" name="email"/>
+      <xs:element type="xs:string" name="website"/>
+      <xs:element type="xs:string" name="copyright">
+        <xs:annotation>
+          <xs:documentation> Creating div class for last footer</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:choice>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="Wendys-cardType">
+    <xs:sequence>
+      <xs:element type="imgType" name="img"/>
+      <xs:element type="divType" name="div">
+        <xs:annotation>
+          <xs:documentation> Creating button element for the option to buy giftcard </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="WendysType">
+    <xs:sequence>
+      <xs:element type="Wendys-cardType" name="Wendys-card">
+        <xs:annotation>
+          <xs:documentation> Forming id and listing it as grid items  End of div class</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="Gucci-cardType">
+    <xs:sequence>
+      <xs:element type="imgType" name="img"/>
+      <xs:element type="divType" name="div"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="GucciType">
+    <xs:sequence>
+      <xs:element type="Gucci-cardType" name="Gucci-card">
+        <xs:annotation>
+          <xs:documentation> Forming id and listing it as grid items  End of div class</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="Starbucks-cardType">
+    <xs:sequence>
+      <xs:element type="imgType" name="img"/>
+      <xs:element type="divType" name="div"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="StarbucksType">
+    <xs:sequence>
+      <xs:element type="Starbucks-cardType" name="Starbucks-card">
+        <xs:annotation>
+          <xs:documentation> Forming id and listing it as grid items  End of div class</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="physicalgiftcardType">
+    <xs:sequence>
+      <xs:element type="WendysType" name="Wendys"/>
+      <xs:element type="GucciType" name="Gucci"/>
+      <xs:element type="StarbucksType" name="Starbucks"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="Tinder-cardType">
+    <xs:sequence>
+      <xs:element type="imgType" name="img"/>
+      <xs:element type="divType" name="div"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="TinderType">
+    <xs:sequence>
+      <xs:element type="Tinder-cardType" name="Tinder-card">
+        <xs:annotation>
+          <xs:documentation> end of div class</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="Playstation-cardType">
+    <xs:sequence>
+      <xs:element type="imgType" name="img"/>
+      <xs:element type="divType" name="div"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="PlaystationType">
+    <xs:sequence>
+      <xs:element type="Playstation-cardType" name="Playstation-card">
+        <xs:annotation>
+          <xs:documentation> End of div class</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="Valorant-cardType">
+    <xs:sequence>
+      <xs:element type="imgType" name="img" minOccurs="0"/>
+      <xs:element type="divType" name="div" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation> Creating button for options End of div class End of div class</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="ValorantType">
+    <xs:sequence>
+      <xs:element type="Valorant-cardType" name="Valorant-card">
+        <xs:annotation>
+          <xs:documentation> End of div class</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="digitalgiftcardType">
+    <xs:sequence>
+      <xs:element type="TinderType" name="Tinder"/>
+      <xs:element type="PlaystationType" name="Playstation"/>
+      <xs:element type="ValorantType" name="Valorant"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="footerType">
+    <xs:sequence>
+      <xs:element type="Valorant-cardType" name="Valorant-card">
+        <xs:annotation>
+          <xs:documentation> Creating seperate section for footer option in website End of div class for last footer</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="StoreType">
+    <xs:sequence>
+      <xs:element type="navbarType" name="navbar">
+        <xs:annotation>
+          <xs:documentation> Linking Schema to XML Start of navigation bar for website </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="physicalgiftcardType" name="physicalgiftcard">
+        <xs:annotation>
+          <xs:documentation> Creation of physicalgiftcard section to include giftcard in website </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="digitalgiftcardType" name="digitalgiftcard">
+        <xs:annotation>
+          <xs:documentation> Creation of digitalgiftcard section to include giftcard in website </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="footerType" name="footer"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
